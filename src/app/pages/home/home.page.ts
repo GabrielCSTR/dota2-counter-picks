@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LoadingController, ToastController } from '@ionic/angular';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   private loading: any;
   
@@ -16,6 +16,9 @@ export class HomePage {
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController
   ) {}
+
+  ngOnInit() {
+  }
 
   async logout() {
     await this.presentLoading();
@@ -38,5 +41,4 @@ export class HomePage {
     const toast = await this.toastCtrl.create({ message, duration: 2000 });
     toast.present();
   }
-
 }

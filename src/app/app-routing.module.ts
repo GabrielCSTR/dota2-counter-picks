@@ -1,16 +1,18 @@
+import { LoggedGuard } from './guards/logged.guard';
+import { AuthGuard } from './guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'hero-list', pathMatch: 'full' }, 
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'hero-list',
+    loadChildren: () => import('./pages/heros/hero-list/hero-list.module').then( m => m.HeroListPageModule)
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
+    path: 'hero-details',
+    loadChildren: () => import('./pages/heros/hero-detail/hero-detail.module').then( m => m.HeroDetailPageModule)
+  }
 ];
 
 @NgModule({
