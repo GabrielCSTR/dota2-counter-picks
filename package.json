@@ -1,7 +1,7 @@
 {
-  "name": "academy-dota2",
+  "name": "dota2-caunter-pick",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Gabriel Carlos (g4brielcarlos@hotmail.com)",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { HergosInfo } from 'src/app/_models/herosinfo';
+import { Tab1Root, Tab2Root, Tab3Root } from '../../';
 
 @Component({
   selector: 'app-hero-list',
@@ -15,10 +16,23 @@ export class HeroListPage implements OnInit {
   searchList;
   isItemAvailable = false;
 
+  tab1Root: any = Tab1Root;
+  tab2Root: any = Tab2Root;
+  tab3Root: any = Tab3Root;
+
+  tab1Title = " ";
+  tab2Title = " ";
+  tab3Title = " ";
+  
   constructor(
     private aptService: HerosFirebaseService,
 
-  ) { }
+  ) { 
+
+    this.tab1Title = 'NEWS';
+    this.tab2Title = 'HEROS';
+    this.tab3Title = 'PICKS';
+  }
 
   ngOnInit() {
 
