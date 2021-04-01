@@ -1,5 +1,3 @@
-import { LoggedGuard } from './guards/logged.guard';
-import { AuthGuard } from './guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -10,7 +8,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/heros/hero-list/hero-list.module').then( m => m.HeroListPageModule)
   },
   {
-    path: 'hero-details',
+    path: 'hero-details/:id',
     loadChildren: () => import('./pages/heros/hero-detail/hero-detail.module').then( m => m.HeroDetailPageModule)
   }
 ];

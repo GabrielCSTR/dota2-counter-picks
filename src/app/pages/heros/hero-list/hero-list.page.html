@@ -11,20 +11,22 @@
     <ion-row>
       <ion-col>
         <div class="ion-text-center">
-          <h3>List Heros</h3>
+          <h3>Heros List</h3>
           <p style="font-size: 10px;">Last Update: 20/20/20.</p>
         </div>
       </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col col-5 class="ion-align-items-center ion-text-center" *ngFor="let item of HerosList">
-        <ion-avatar text-center>
-          <img [src]="item.img" style="display: inline;" />
-          <div class="ion-padding-bottom ion-text-uppercase ion-margin-bottom">
-            {{item.heroi}}
-          </div>
-        </ion-avatar>
+      <ion-col size="4" class="ion-align-items-center ion-text-center" *ngFor="let item of HerosList">
+        
+          <ion-avatar text-center (click)="openHeroiDetail(item)">
+            <img [src]="item.img" style="display: inline;" />
+            <div class="ion-padding-bottom ion-text-uppercase ion-margin-bottom">
+              {{item.heroi}}
+            </div>
+          </ion-avatar>
+        
       </ion-col>
     </ion-row>
 

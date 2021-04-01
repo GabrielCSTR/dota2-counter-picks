@@ -1,7 +1,5 @@
-import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { LoadingController, ToastController } from '@ionic/angular';
-import { User } from 'src/app/interfaces/user';
 
 @Component({
   selector: 'app-login',
@@ -10,10 +8,8 @@ import { User } from 'src/app/interfaces/user';
 })
 export class LoginPage implements OnInit {
 
-  public userLogin: User = {};
   private loading: any;
   constructor(
-    private authService: AuthService,
     private loadingController: LoadingController,
     private toastController: ToastController
   ) { }
@@ -25,7 +21,7 @@ export class LoginPage implements OnInit {
     await this.presentLoading();
 
     try {
-      await this.authService.login(this.userLogin);
+      //await this.authService.login(this.userLogin);
     } catch (error) {
 
       let message: string;

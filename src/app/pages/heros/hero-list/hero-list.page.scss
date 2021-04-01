@@ -28,6 +28,10 @@ ion-avatar{
     box-shadow: 0 0 5px gray;
 }
 
+ion-avatar:hover{
+    cursor: pointer !important;
+}
+
 ion-col, div{
     margin-top: 8px;
     font-size: 8px;
@@ -36,8 +40,26 @@ ion-col, div{
 }
 
 ion-content{
+
     --ion-background-color:#1f201f;
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
+ion-tab-bar{
+    --background: #1f201f !important;
+}
+
+button{
+    background: transparent !important;
+}
+
+ion-grid{
+    background:#1f201f;
+}
   
   

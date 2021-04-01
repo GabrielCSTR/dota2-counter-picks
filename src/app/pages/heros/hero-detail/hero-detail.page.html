@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>hero-detail</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/hero-list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Hero detail - {{ herosinfo.heroi }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <img [src]="herosinfo.img" style="display: inline;" />
 </ion-content>

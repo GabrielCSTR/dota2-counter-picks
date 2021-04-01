@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { LoadingController, MenuController, Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +14,6 @@ export class AppComponent {
   private loading: any;
 
   constructor(
-    private authService: AuthService,
     private loadingCtrl: LoadingController,
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -61,19 +59,6 @@ export class AppComponent {
     }
     
   ]
-
-  async logout() {
-    await this.presentLoading();
-
-    try {
-      this.menu.toggle();
-      await this.authService.logout();
-    } catch (error) {
-      console.error(error);
-    } finally {
-      this.loading.dismiss();
-    }
-  }
 
   async presentLoading() {
     this.loading = await this.loadingCtrl.create({ message: 'Aguarde...' });
