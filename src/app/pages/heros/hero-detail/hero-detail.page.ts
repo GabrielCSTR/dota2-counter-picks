@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { HergosInfo } from 'src/app/_models/herosinfo';
+import { HerosInfo } from 'src/app/_models/herosinfo';
 
 @Component({
   selector: 'app-hero-detail',
@@ -9,7 +9,8 @@ import { HergosInfo } from 'src/app/_models/herosinfo';
 })
 export class HeroDetailPage implements OnInit {
 
-  herosinfo: HergosInfo;
+  herosinfo: HerosInfo;
+  skillhero;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,12 +22,13 @@ export class HeroDetailPage implements OnInit {
 
       if (this.router.getCurrentNavigation().extras.state) {
 
-        // console.log(this.router.getCurrentNavigation().extras.state);
+        console.log('Query Params:', this.router.getCurrentNavigation().extras.state);
 
         this.herosinfo = this.router.getCurrentNavigation().extras.state.heroiInfo;
+        this.skillhero = this.router.getCurrentNavigation().extras.state.skillInfo;
 
-        console.log(this.herosinfo);
-        
+        console.log('Hero Infos:', this.herosinfo);
+        console.log('Hero Skill:', this.skillhero);
 
       }
 

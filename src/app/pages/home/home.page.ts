@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoadingController, ToastController } from '@ionic/angular';
-import { AuthService } from 'src/app/services/auth.service';
+
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,7 @@ export class HomePage implements OnInit {
   private loading: any;
   
   constructor(
-    private authService: AuthService,
+
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController
   ) {}
@@ -24,7 +24,7 @@ export class HomePage implements OnInit {
     await this.presentLoading();
 
     try {
-      await this.authService.logout();
+      //await this.authService.logout();
     } catch (error) {
       console.error(error);
     } finally {

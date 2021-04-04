@@ -1,6 +1,6 @@
 import { BestVersus } from "./bestversus";
 
-export class HergosInfo {
+export class HerosInfo {
     $key: string;
     bestversus: BestVersus;
     heroi: string
