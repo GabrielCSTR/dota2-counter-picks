@@ -1,9 +1,6 @@
 import { HerosInfo } from './../../../_models/herosinfo';
 import { DotabuffDBService } from './../../../services/dotabuff-db.service';
-import { HerosFirebaseService } from './../../../services/heros-firebase.service';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { Tab1Root, Tab2Root, Tab3Root } from '../../';
 import { NavigationExtras, Router } from '@angular/router';
 
@@ -33,7 +30,6 @@ export class HeroListPage implements OnInit {
   MAX_HEROS = 119;  // total heros
 
   constructor(
-    private aptService: HerosFirebaseService,
     private router: Router,
     private service: DotabuffDBService
 
@@ -103,13 +99,6 @@ export class HeroListPage implements OnInit {
       var a = objA.heroi.toLowerCase().replace(/[àáâãäå]/,"a").replace(/[èéêë]/,"e").replace(/[ìíîï]/,"i").replace(/[òóôõö]/,"o").replace(/[ùúûü]/,"u").replace(/[ç]/,"c").replace(/[^a-z0-9]/gi,'')
       var b = objB.heroi.toLowerCase().replace(/[àáâãäå]/,"a").replace(/[èéêë]/,"e").replace(/[ìíîï]/,"i").replace(/[òóôõö]/,"o").replace(/[ùúûü]/,"u").replace(/[ç]/,"c").replace(/[^a-z0-9]/gi,'')
       return a < b ? -1 : a > b ? 1 : 0;
-    })
-  }
-
-  // buscar heros
-  fetchHeros() {
-    this.aptService.getAllHeros().valueChanges().subscribe(res => {
-      console.log(res)
     })
   }
 
