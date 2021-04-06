@@ -31,8 +31,7 @@ export class HeroListPage implements OnInit {
 
   constructor(
     private router: Router,
-    private service: DotabuffDBService
-
+    private service: DotabuffDBService,
   ) { 
 
     // menus

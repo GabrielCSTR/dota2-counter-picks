@@ -1,0 +1,52 @@
+* {
+    font-family: lato;
+}
+
+ion-header{
+    --ion-toolbar-background: #1f201f;
+}
+
+ion-content{
+
+    --ion-background-color:#1f201f;
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+ion-grid {
+    height: 100%;
+    border: 2px solid black;
+    background: #1f201f;
+}
+
+// ion-avatar{
+//     border: 2px solid #fff;
+//     border-radius: 50%;
+//     box-shadow: 0 0 5px gray;
+//     width: 25%;
+//     margin-right: 20px;
+// }
+
+.header{
+    display: flex;
+
+    img{
+        // border: 2px solid #fff;
+        // box-shadow: 0 0 5px gray;
+        width: 87px;
+        height: 59px;
+    }
+
+}
+
+.hero_talents{
+    //padding-left: 50%;
+}
+
+ion-card-title{
+    color: white;
+}

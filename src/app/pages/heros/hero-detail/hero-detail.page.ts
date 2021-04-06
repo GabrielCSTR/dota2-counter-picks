@@ -17,10 +17,14 @@ export class HeroDetailPage implements OnInit {
     private router: Router,
   ) {
 
+   }
+
+  ngOnInit() {
+
     // Recebe os dados que vai ser editado
     this.route.queryParams.subscribe(params => {
 
-      if (this.router.getCurrentNavigation().extras.state) {
+      if (this.router.getCurrentNavigation().extras.state.heroiInfo && this.router.getCurrentNavigation().extras.state.skillInfo) {
 
         console.log('Query Params:', this.router.getCurrentNavigation().extras.state);
 
@@ -33,9 +37,6 @@ export class HeroDetailPage implements OnInit {
       }
 
     });
-   }
-
-  ngOnInit() {
   }
 
 }
