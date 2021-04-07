@@ -12,11 +12,20 @@ export class HeroDetailPage implements OnInit {
   herosinfo: HerosInfo;
   skillhero;
 
+  tab1Title = " ";
+  tab2Title = " ";
+  tab3Title = " ";
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
   ) {
 
+    // menus
+    this.tab1Title = 'NEWS';
+    this.tab2Title = 'HEROS';
+    this.tab3Title = 'PICKS';
+    
    }
 
   ngOnInit() {

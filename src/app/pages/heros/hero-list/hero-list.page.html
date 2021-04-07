@@ -18,7 +18,7 @@
     </ion-row>
 
     <ion-row>
-      <ion-col size="4" class="ion-align-items-center ion-text-center" *ngFor="let item of HerosList">
+      <ion-col class="ion-align-items-left ion-text-center" *ngFor="let item of HerosList">
         
           <ion-avatar text-center (click)="openHeroiDetail(item)">
             <img [src]="item.img" style="display: inline;" />
