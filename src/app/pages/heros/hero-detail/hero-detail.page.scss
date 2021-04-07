@@ -44,15 +44,12 @@ ion-title {
     border-radius: 50%;
 }
 .header{
-    display: flex;
-
     img{
         // border: 2px solid #fff;
         // box-shadow: 0 0 5px gray;
         width: 87px;
         height: 59px;
     }
-
 }
 
 .hero_talents{
@@ -80,4 +77,8 @@ ion-label{
 
 ion-tab-bar{
     --background: #1f201f !important;
+}
+
+ion-slide >:first-child {
+    width: 100%;
 }

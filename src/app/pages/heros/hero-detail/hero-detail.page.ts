@@ -50,7 +50,7 @@ export class HeroDetailPage implements OnInit {
     });
 
     // loading
-    this.showLoader();
+    //this.showLoader();
   }
 
   showLoader() {
