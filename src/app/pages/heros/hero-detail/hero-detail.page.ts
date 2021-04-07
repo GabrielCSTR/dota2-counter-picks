@@ -1,3 +1,4 @@
+import { LoaderService } from './../../../services/loader.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HerosInfo } from 'src/app/_models/herosinfo';
@@ -19,6 +20,7 @@ export class HeroDetailPage implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private ionLoader: LoaderService
   ) {
 
     // menus
@@ -46,6 +48,13 @@ export class HeroDetailPage implements OnInit {
       }
 
     });
+
+    // loading
+    this.showLoader();
+  }
+
+  showLoader() {
+    this.ionLoader.showHideAutoLoader();
   }
 
 }

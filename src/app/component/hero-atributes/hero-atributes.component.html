@@ -1,0 +1,111 @@
+  <!-- CARD HEROS ATRIBUTES -->
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>HERO ATTRIBUTES</ion-card-title>
+      <ion-card-subtitle>Primary Atribute</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content text-center>
+      <!-- hero primary atributes -->
+      <ion-row style="border-bottom: groove;">
+        <ion-col>
+          <img src='/assets/img/hero_str.png' />
+          {{ herosinfo ? herosinfo.heros_atributes[0].atributes_primary[0].str : '' }}
+        </ion-col>
+
+        <ion-col>
+          <img src='/assets/img/hero_agi.png' />
+          {{ herosinfo ? herosinfo.heros_atributes[0].atributes_primary[0].agi : '' }}
+        </ion-col>
+
+        <ion-col>
+          <img src='/assets/img/hero_int.png' />
+          {{ herosinfo ? herosinfo.heros_atributes[0].atributes_primary[0].int : '' }}
+        </ion-col>
+
+      </ion-row>
+      
+      <!-- hero secundary atributes -->
+      <ion-row style="border-bottom: groove;">
+        <ion-col col-4>
+          <ion-label> {{ herosinfo ? herosinfo.heros_atributes[0].atributes_base[0].name : '' }} </ion-label>
+        </ion-col>
+        <ion-col col-4>
+          <ion-label></ion-label>
+        </ion-col>
+        <ion-col col-4>
+          <ion-label class="alignme">{{ herosinfo ? herosinfo.heros_atributes[0].atributes_base[0].value : ''
+            }}</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="border-bottom: groove;">
+        <ion-col col-4>
+          <ion-label>{{ herosinfo ? herosinfo.heros_atributes[0].atributes_base[1].name : '' }}
+          </ion-label>
+        </ion-col>
+        <ion-col col-4>
+          <ion-label></ion-label>
+        </ion-col>
+        <ion-col col-4>
+          <ion-label class="alignme">{{ herosinfo ? herosinfo.heros_atributes[0].atributes_base[1].value : ''
+            }}</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="border-bottom: groove;">
+        <ion-col col-4>
+          <ion-label>{{ herosinfo ? herosinfo.heros_atributes[0].atributes_base[2].name : '' }}
+          </ion-label>
+        </ion-col>
+        <ion-col col-4>
+          <ion-label></ion-label>
+        </ion-col>
+        <ion-col col-4 text-right>
+          <ion-label class="alignme">{{ herosinfo ? herosinfo.heros_atributes[0].atributes_base[2].value : ''
+            }}</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="border-bottom: groove;">
+        <ion-col col-4>
+          <ion-label>{{ herosinfo ? herosinfo.heros_atributes[0].atributes_base[3].name : '' }}</ion-label>
+        </ion-col>
+        <ion-col col-4>
+          <ion-label></ion-label>
+        </ion-col>
+        <ion-col col-4>
+          <ion-label class="alignme">{{ herosinfo ? herosinfo.heros_atributes[0].atributes_base[3].value : ''
+            }}</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="border-bottom: groove;">
+        <ion-col col-4>
+          <ion-label>{{ herosinfo ? herosinfo.heros_atributes[0].atributes_base[4].name : '' }}</ion-label>
+        </ion-col>
+        <ion-col col-4>
+          <ion-label></ion-label>
+        </ion-col>
+        <ion-col col-4>
+          <ion-label class="alignme">{{ herosinfo ? herosinfo.heros_atributes[0].atributes_base[4].value : ''
+            }}</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="border-bottom: groove;">
+        <ion-col col-4>
+          <ion-label>{{ herosinfo ? herosinfo.heros_atributes[0].atributes_base[5].name : '' }}</ion-label>
+        </ion-col>
+        <ion-col col-4>
+          <ion-label></ion-label>
+        </ion-col>
+        <ion-col col-4>
+          <ion-label class="alignme">{{ herosinfo ? herosinfo.heros_atributes[0].atributes_base[5].value : ''
+            }}</ion-label>
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+  </ion-card>

@@ -66,3 +66,16 @@
         }
     }
 }
+
+ion-loading.transparent {
+    .loading-wrapper {
+      background: transparent;
+      box-shadow: none;
+  
+      .spinner-crescent circle {
+        stroke-width: 8px;
+      }
+    }
+    --background:#F4B004;
+    --spinner-color:#F94701;
+  }
